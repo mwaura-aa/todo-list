@@ -1,0 +1,72 @@
+body{
+  margin: 0px;
+  padding: 0px;
+}
+
+p{
+  font-size: 2.0em;
+  font-weight: bold;
+}
+
+.p{
+  font-size: 1.3em;
+  font-weight: none;
+}
+
+.add{
+  background-color: lightgreen;
+  border: none;
+  padding: 15px;
+  font-weight: bold;
+  margin: 5px;
+  width: 100px;
+  border-radius: 20px;
+  transition: 0.4s, ease-in-out, 0.5s;
+}
+
+.add:hover{
+  background-color: rgb(100, 195, 100);
+  font-size: 1.5em;
+}
+
+input{
+  font-weight: bold;
+  padding: 15px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+div{
+  font-weight: bold;
+  padding: 10px;
+  margin: 0px;
+}
+
+.div-todoItem{
+  font-weight: bold;
+  padding: 15px;
+  margin: 0px;
+}
+
+.div-todoItem:hover{
+  font-size: 1.2em;
+}
+
+.deleteBtn{
+  background-color: red;
+  border: none;
+  padding: 15px;
+  font-weight: bold;
+  margin: 5px;
+  width: 100px;
+  color: white;
+  border-radius: 20px;
+  transition: 0.4s, ease-in-out, 0.5s;
+}
+
+.deleteBtn:hover{
+  background-color: rgb(138, 30, 26);
+  font-size: 1.5em;
+  padding: 20px;
+  width: 120px;
+}
