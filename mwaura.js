@@ -5,7 +5,7 @@ const display = document.getElementById('display');
 
 let inputArray = JSON.parse(localStorage.getItem('todos')) || [];
 
-addBtn.onclick = function (){
+addBtn.onclick = () => {
   const todoTask = inputContent.value.trim();
   const todoDate = date.value;
 
@@ -27,7 +27,7 @@ addBtn.onclick = function (){
 function renderTask(){
   display.innerHTML = '';
 
-  inputArray.forEach(function(todo, index){
+  inputArray.forEach((todo, index) => {
     const todoItem = document.createElement('div');
     todoItem.classList.add('div-todoItem')
     const todoText = document.createElement('span');
@@ -39,7 +39,7 @@ function renderTask(){
     todoDate.textContent = todo.date;
     deleteBtn.textContent = 'Delete';
 
-    deleteBtn.onclick = function(){
+    deleteBtn.onclick = () => {
       inputArray.splice(index, 1);
       localStorage.setItem('todos', JSON.stringify(inputArray));
       renderTask();
@@ -55,8 +55,9 @@ function renderTask(){
 
 window.onload = renderTask;
 
-document.addEventListener('keydown', function(event){
+document.addEventListener('keydown', (event) => {
   if(event.key === 'Enter'){
     addBtn.click();
   }
 })
+
