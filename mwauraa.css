@@ -29,6 +29,13 @@ p{
   font-size: 1.5em;
 }
 
+div.input{
+  display: grid;
+  grid-template-columns: 200px 100px 150px;
+  column-gap: 5px;
+  align-items: center;
+}
+
 input{
   font-weight: bold;
   padding: 15px;
@@ -36,13 +43,11 @@ input{
   border-radius: 20px;
 }
 
-div{
-  font-weight: bold;
-  padding: 10px;
-  margin: 0px;
-}
-
 .div-todoItem{
+  display: grid;
+  grid-template-columns: 200px 100px 150px;
+  align-items: center;
+  column-gap: 5px;
   font-weight: bold;
   padding: 15px;
   margin: 0px;
