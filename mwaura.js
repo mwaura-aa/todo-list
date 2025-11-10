@@ -27,7 +27,7 @@ addBtn.onclick = function (){
 function renderTask(){
   display.innerHTML = '';
 
-  for(let i = 0; i < inputArray.length; i++){
+  inputArray.forEach(function(todo, index){
     const todoItem = document.createElement('div');
     todoItem.classList.add('div-todoItem')
     const todoText = document.createElement('span');
@@ -35,12 +35,12 @@ function renderTask(){
     const deleteBtn = document.createElement('button');
     deleteBtn.classList.add('deleteBtn');
 
-    todoText.textContent = inputArray[i].task;
-    todoDate.textContent = inputArray[i].date;
+    todoText.textContent = todo.task;
+    todoDate.textContent = todo.date;
     deleteBtn.textContent = 'Delete';
 
     deleteBtn.onclick = function(){
-      inputArray.splice(i, 1);
+      inputArray.splice(index, 1);
       localStorage.setItem('todos', JSON.stringify(inputArray));
       renderTask();
     }
@@ -49,11 +49,8 @@ function renderTask(){
     todoItem.appendChild(todoDate);
     todoItem.appendChild(deleteBtn);
 
-    todoText.style.marginRight = '160px';
-    todoDate.style.marginRight = '70px'; 
-
     display.appendChild(todoItem);
-  }
+  })
 }
 
 window.onload = renderTask;
